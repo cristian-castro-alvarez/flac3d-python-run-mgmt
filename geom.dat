@@ -1,0 +1,23 @@
+model new
+model large-strain off
+
+zone create brick ...
+    point 0 0 0 0 point 1 10 0 0 point 2 0 10 0 point 3 0 0 10
+
+; Boundary conditions
+zone gridpoint fix velocity-x 0. range position-x 0 tolerance 0.1
+zone gridpoint fix velocity-y 0. range position-x 0 tolerance 0.1
+zone gridpoint fix velocity-x 0. range position-x 10 tolerance 0.1
+zone gridpoint fix velocity-y 0. range position-x 10 tolerance 0.1
+zone gridpoint fix velocity-x 0. range position-y 0 tolerance 0.1
+zone gridpoint fix velocity-y 0. range position-y 0 tolerance 0.1
+zone gridpoint fix velocity-x 0. range position-y 10 tolerance 0.1
+zone gridpoint fix velocity-y 0. range position-y 10 tolerance 0.1
+zone gridpoint fix velocity-x 0. range position-z 0 tolerance 0.1
+zone gridpoint fix velocity-y 0. range position-z 0 tolerance 0.1
+zone gridpoint fix velocity-z 0. range position-z 0 tolerance 0.1
+
+; Gravity
+model gravity 0 0 -9.81
+
+model save 'geom.sav'

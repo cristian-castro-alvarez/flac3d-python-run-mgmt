@@ -1,0 +1,9 @@
+; Rock Mass
+zone cmodel assign elastic
+zone property density @global_density
+zone property young @global_young_modulus
+zone property poisson @global_poisson
+
+model solve ratio 1e-6 
+
+program return
