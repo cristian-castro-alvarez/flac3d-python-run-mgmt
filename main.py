@@ -47,7 +47,9 @@ def run(config_file: os.PathLike, output_folder: os.PathLike, file_name: os.Path
 if __name__ == '__main__':
     """
     Example script for running multiple FLAC3D models
-    Takes as input 'geom.sav' which is the desired geometry with boundary conditions and gravity already set
+    Takes as input:
+     - 'geom.sav': Desired geometry with boundary conditions and gravity already set
+     - 'config.json': Config file with all the different parameter combination to be run
     """
     
     # Avoid Python of losing its memory
