@@ -7,6 +7,7 @@ from utils import ProjectConfig, LoadConfigFile
 
 OUTPUT_FILE_NAME = 'summary.csv'
 CONFIG_FILE_NAME = 'config.json'
+FOLDER_NAME = 'sensitivity_analysis'
 
 
 def run(config_file: os.PathLike, output_folder: os.PathLike, file_name: os.PathLike) -> None:
@@ -58,7 +59,7 @@ if __name__ == '__main__':
     """)
     
     # Set the desired architecture
-    output_folder = ProjectConfig(output_folder='sensitivity_analysis').make_output_folder()
+    output_folder = ProjectConfig(output_folder=FOLDER_NAME).make_output_folder()
 
     # Execute
     run(config_file=CONFIG_FILE_NAME, output_folder=output_folder, file_name=OUTPUT_FILE_NAME)
